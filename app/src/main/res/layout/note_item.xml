@@ -30,7 +30,7 @@ android:padding="16dp">
         android:layout_height="wrap_content"
         android:text="title"
         android:fontFamily=""
-        android:textColor="@color/orange"
+        android:textColor="@color/teal"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -57,7 +57,7 @@ android:padding="16dp">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Content"
-        android:textColor="@color/orange"
+        android:textColor="@color/teal"
        android:maxLines="3"
         android:layout_marginTop="4dp" />
 

@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_thin"
         android:text="Edit Note."
-        android:textColor="@color/orange"
+        android:textColor="@color/teal"
         android:textSize="24sp" />
 
 

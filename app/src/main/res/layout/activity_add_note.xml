@@ -15,8 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_thin"
-        android:text="Add Note."
-        android:textColor="@color/orange"
+        android:text="Create Recipe."
+        android:textColor="@color/teal"
         android:textSize="24sp" />
 
 
@@ -33,7 +33,7 @@
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Enter the title"
+        android:hint="Enter recipe name"
         android:padding="12dp"
         android:textSize="20sp"
         android:layout_below="@id/addNoteHeading"
@@ -50,7 +50,7 @@
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Enter the description"
+        android:hint="Eneter the ingrdeints"
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"
