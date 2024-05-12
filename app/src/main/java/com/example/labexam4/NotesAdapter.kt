@@ -9,13 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
+
 
 class NotesAdapter (private var notes: List <Note>, context: Context) : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
+    private val db: NoteDatabaseHelper = NoteDatabaseHelper(context)
     class NotesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)
         val updateButton: ImageView = itemView.findViewById(R.id.updateButton)
+        val deleteButton: ImageView = itemView.findViewById(R.id.deleteButton)
 
     }
 
@@ -42,6 +46,12 @@ class NotesAdapter (private var notes: List <Note>, context: Context) : Recycler
                 putExtra("note_id", note.id)
             }
             holder.itemView.context.startActivity(intent)
+        }
+
+        holder.deleteButton.setOnClickListener{
+            db.deleteNote(note.id)
+            refreshData(db.getAllNotes())
+            Toast.makeText(holder.itemView.context, "Note deleted", Toast.LENGTH_SHORT).show()
         }
     }
 
