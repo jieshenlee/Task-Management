@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddNoteActivity::class.java)
             startActivity(intent)
         }
+
+
     }
     override fun onResume(){
         super.onResume()
